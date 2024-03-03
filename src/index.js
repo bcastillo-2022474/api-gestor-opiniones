@@ -4,6 +4,9 @@ import helmet from 'helmet';
 import cors from 'cors';
 import connection from './database/mongo.js';
 import userRoutes from './routes/user.routes.js';
+import postRoutes from './routes/post.routes.js';
+import commentRoutes from './routes/comment.routes.js';
+import categoryRoutes from './routes/category.routes.js';
 import User from './models/user.model.js';
 import { hashPassword } from './helpers/bcrypt.js';
 import 'dotenv/config';
@@ -19,6 +22,9 @@ app.use(cors());
 
 // Routes
 app.use('/user', userRoutes);
+app.use('/post', postRoutes);
+app.use('/comment', commentRoutes);
+app.use('/category', categoryRoutes);
 
 // Start server
 connection()
