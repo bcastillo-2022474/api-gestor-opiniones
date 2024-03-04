@@ -21,6 +21,7 @@ app.use(helmet());
 app.use(cors());
 
 // Routes
+console.log("USER")
 app.use('/user', userRoutes);
 app.use('/post', postRoutes);
 app.use('/comment', commentRoutes);
