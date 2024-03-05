@@ -97,6 +97,7 @@ export const registerController = async (req, res) => {
 
 export const loginController = async (req, res) => {
   try {
+    console.log("WORKINg")
     const { username, email, password } = req.body;
 
     if (username && email) {
